@@ -57,7 +57,7 @@
       "kicker": "How it works",
       "title": "One switch: the endless feed becomes a single button.",
       "before": { "label": "Before", "tag": "never stops", "loading": "loading forever…" },
-      "after": { "label": "After", "tag": "you decide", "caption": "the feed waits for you" }
+      "after": { "label": "After", "tag": "you decide", "caption": "The decision is yours." }
     },
     "benefits": {
       "kicker": "Why you'll keep it on",
