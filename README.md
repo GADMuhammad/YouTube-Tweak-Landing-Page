@@ -1,75 +1,73 @@
-# React + TypeScript + Vite
+# YouTube Tweak — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing landing page for **YouTube Tweak**, a free, open-source Chrome extension
+that fixes small but persistent annoyances in YouTube's UI. The page presents one
+extension with four fixes, switchable via a tab bar:
 
-Currently, two official plugins are available:
+- **Infinite scroll off** *(shipping)* — replaces YouTube's endless feed with a single
+  "Load More Videos" button.
+- **Real dates** *(shipping)* — turns vague relative timestamps ("5 months ago") into
+  the exact publish date, fully configurable via a live settings popup.
+- **Quick search** *(coming soon)*
+- **Hide videos by keyword** *(coming soon)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Bilingual by design: full English (LTR) and Arabic (RTL) support, including mirrored
+layouts, localized copy, and a Hijri/Gregorian calendar toggle in the Real Dates demo.
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React 19](https://react.dev) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev) for dev server / build
+- CSS Modules for styling (no CSS framework)
+- [react-i18next](https://react.i18next.com/) for i18n (`src/i18n/en.json`, `src/i18n/ar.json`)
+- [Phosphor Icons](https://phosphoricons.com/) (`@phosphor-icons/react`)
+- `Intl.DateTimeFormat` for the live Gregorian/Hijri date-format preview (no date library)
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev       # start the dev server (http://localhost:5173)
+npm run build     # type-check (tsc -b) and build to dist/
+npm run preview   # preview the production build locally
+npm run lint      # run ESLint
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project structure
 
 ```
+src/
+  components/       # one folder per component (Component.tsx + Component.module.css)
+    Nav/
+    FeatureSwitcher/
+    Hero/
+    Problem/
+    HowItWorks/      # BeforeAfter (feature 0) and DatePopupSection (feature 1)
+    DatePopup/        # the interactive date-format settings popup + Intl formatting logic
+    Benefits/
+    InstallBand/
+    Footer/
+    YouTubeMock/      # the embedded browser-chrome mock of youtube.com
+  pages/              # Feature0Page, Feature1Page, PlaceholderPage (coming-soon tabs)
+  data/               # features.ts (tab metadata), videos.ts (mock video data, per language)
+  i18n/               # en.json / ar.json copy, i18next setup
+  styles/             # tokens.css — shared design tokens (colors, fonts, radii, shadows)
+  App.tsx             # top-level state: language, active feature tab
+
+reference/            # original design handoff / prototype files (not built or shipped)
+public/                # real video thumbnail & avatar assets used by the mock UI
+```
+
+## Language & theming
+
+- Language toggling flips `document.documentElement.dir`/`lang` and is persisted to
+  `localStorage`. All strings come from `src/i18n/{en,ar}.json`.
+- Visual design tokens (colors, radii, shadows, fonts) live in `src/styles/tokens.css`.
+- The site is a single dark theme; there is no light-mode toggle.
+
+## Notes
+
+- The "Add to Chrome" CTA is currently a placeholder (`#`) pending the Chrome Web Store
+  listing. The GitHub CTA points at this repository.
+- `reference/` holds the original prototype/design-handoff files used to build this page
+  and isn't part of the shipped app.
