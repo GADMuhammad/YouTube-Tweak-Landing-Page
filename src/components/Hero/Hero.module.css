@@ -47,7 +47,7 @@ html[dir='rtl'] .title {
 
 .ctas {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -55,8 +55,8 @@ html[dir='rtl'] .title {
 .ctaSecondary {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
-  padding: 13px 24px;
+  gap: 7px;
+  padding: 13px 18px;
   border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 15px;
@@ -76,7 +76,7 @@ html[dir='rtl'] .title {
 }
 
 .ctaSecondary {
-  padding-inline: 22px;
+  padding-inline: 16px;
   border-color: var(--color-neutral-700);
   color: color-mix(in srgb, var(--color-text) 80%, transparent);
   transition: border-color 0.15s, color 0.15s;
