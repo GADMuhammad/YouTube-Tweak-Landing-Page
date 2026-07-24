@@ -32,3 +32,17 @@
   color: color-mix(in srgb, var(--color-text) 70%, transparent);
   font-weight: 600;
 }
+
+@media (max-width: 860px) {
+  .footer {
+    padding: 20px 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer {
+    padding: 18px 16px;
+    justify-content: center;
+    text-align: center;
+  }
+}

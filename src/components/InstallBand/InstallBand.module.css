@@ -73,3 +73,34 @@ html[dir='rtl'] .sub {
 .ctaSecondary:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+
+@media (max-width: 860px) {
+  .band {
+    padding: 48px 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .band {
+    padding: 40px 16px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .sub {
+    font-size: 14.5px;
+    max-width: none;
+  }
+
+  .ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    justify-content: center;
+  }
+}

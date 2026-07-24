@@ -48,7 +48,22 @@ html[dir='rtl'] .itemBody {
 }
 
 @media (max-width: 860px) {
+  .section {
+    padding: 40px 24px;
+  }
+
   .grid {
     grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 32px 16px;
+  }
+
+  .grid {
+    gap: 22px;
   }
 }

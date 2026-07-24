@@ -121,3 +121,9 @@ html[dir='rtl'] .duration {
   justify-content: center;
   color: var(--color-accent);
 }
+
+@media (max-width: 560px) {
+  .thumbWrap {
+    width: 104px;
+  }
+}

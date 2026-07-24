@@ -32,8 +32,28 @@ html[dir='rtl'] .title {
 }
 
 @media (max-width: 860px) {
+  .section {
+    padding: 40px 24px;
+  }
+
   .grid {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 32px 16px;
+  }
+
+  .title {
+    font-size: 26px;
+    margin-bottom: 28px;
+  }
+
+  .thumbWrap {
+    width: 96px;
   }
 }
 

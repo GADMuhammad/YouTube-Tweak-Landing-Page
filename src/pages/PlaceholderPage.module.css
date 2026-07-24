@@ -50,3 +50,24 @@ html[dir='rtl'] .body {
   line-height: 1.7;
   max-width: 46ch;
 }
+
+@media (max-width: 860px) {
+  .section {
+    padding: 48px 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 40px 16px;
+  }
+
+  .title {
+    font-size: 26px;
+    max-width: none;
+  }
+
+  .body {
+    max-width: none;
+  }
+}

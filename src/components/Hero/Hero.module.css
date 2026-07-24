@@ -94,5 +94,37 @@ html[dir='rtl'] .title {
 @media (max-width: 860px) {
   .hero {
     grid-template-columns: 1fr;
+    padding: 28px 24px 40px;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    padding: 24px 16px 32px;
+  }
+
+  .title {
+    font-size: 38px;
+    line-height: 1.12;
+  }
+
+  html[dir='rtl'] .title {
+    line-height: 1.4;
+  }
+
+  .sub {
+    font-size: 15px;
+    max-width: none;
+  }
+
+  .ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    justify-content: center;
   }
 }
