@@ -1,4 +1,7 @@
 .popup {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
   background: var(--popup-bg);
   border-radius: var(--radius-xl);
   padding: 14px;
