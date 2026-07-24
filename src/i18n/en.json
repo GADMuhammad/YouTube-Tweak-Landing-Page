@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "extName": "YouTube Tweak"
+  },
+  "nav": {
+    "otherLangLabel": "العربية",
+    "addToChrome": "Add to Chrome"
+  },
+  "switcher": {
+    "kicker": "One extension, four fixes",
+    "comingSoon": "Coming soon"
+  },
+  "features": {
+    "0": {
+      "tab": "Infinite scroll off",
+      "title": "Break the doomscroll.",
+      "sub": "YouTube Tweak disables YouTube's infinite scroll and hands you one honest red button — so the feed stops when you tell it to, not when the algorithm decides you've had enough."
+    },
+    "1": {
+      "tab": "Real dates",
+      "title": "See when it really posted.",
+      "sub": "Turn YouTube’s vague “5 months ago” into the exact publish date, shown on every video — so you always know how old it really is."
+    },
+    "2": {
+      "tab": "Quick search",
+      "title": "Find it in a keystroke.",
+      "sub": "A command-style quick search jumps to any video, channel, or setting — without ever leaving the page you’re on."
+    },
+    "3": {
+      "tab": "Hide videos by keyword",
+      "title": "Hide what you don’t want.",
+      "sub": "One click removes any video — clickbait, Shorts, channels you’re done with — and keeps it gone for good."
+    }
+  },
+  "cta": {
+    "addFree": "Add to Chrome — Free",
+    "github": "View on GitHub"
+  },
+  "badge": {
+    "chromeExtension": "Chrome Extension"
+  },
+  "feat0": {
+    "mock": {
+      "loadMore": "Load More Videos",
+      "caption": "Infinite scroll disabled — you click to continue."
+    },
+    "problem": {
+      "kicker": "The problem",
+      "title": "Infinite scroll isn't a convenience. It's a trap you didn't opt into.",
+      "stats": [
+        { "figure": "∞", "title": "The feed never ends", "body": "Every video auto-loads the next batch. There's no bottom, so there's no natural moment to stop." },
+        { "figure": "40m", "title": "\"Just one more\" adds up", "body": "A quick check turns into a lost evening. The design rewards staying, not leaving." },
+        { "figure": "0", "title": "Decisions you actually made", "body": "You never chose to keep scrolling — the page just kept feeding. Attention on autopilot." }
+      ]
+    },
+    "how": {
+      "kicker": "How it works",
+      "title": "One switch: the endless feed becomes a single button.",
+      "before": { "label": "Before", "tag": "never stops", "loading": "loading forever…" },
+      "after": { "label": "After", "tag": "you decide", "caption": "the feed waits for you" }
+    },
+    "benefits": {
+      "kicker": "Why you'll keep it on",
+      "items": [
+        { "icon": "hourglass-medium", "title": "Reclaim your hours", "body": "Stop losing evenings to a feed engineered to never end. Watch what you came for, then leave." },
+        { "icon": "cursor-click", "title": "You're in control", "body": "The next batch loads only when you click the button. Every step forward is a choice." },
+        { "icon": "check-circle", "title": "Same YouTube, calmer", "body": "Nothing else changes — search, playback, subscriptions all work. The endless scroll just stops." }
+      ]
+    },
+    "install": {
+      "title": "Take back the scroll today.",
+      "sub": "Free, open source, and it works the moment you install it. No account, no setup."
+    }
+  },
+  "feat1": {
+    "mock": {
+      "relativeDate": "Relative date",
+      "actualDate": "Actual date",
+      "views": "1.3M views",
+      "relativeValue": "5 months ago",
+      "actualValue": "Thursday, 19 February 2026"
+    },
+    "problem": {
+      "kicker": "The problem",
+      "title": "“5 months ago” hides the one thing you need — the actual date.",
+      "items": [
+        { "icon": "clock-countdown", "title": "Timestamps keep drifting", "body": "The same upload reads “2 days ago,” then “3 weeks ago,” then “5 months ago.” The number never stops moving." },
+        { "icon": "calendar-x", "title": "The year disappears", "body": "Relative time hides whether a tutorial is from this month or five years ago — exactly what you need to judge it." },
+        { "icon": "scales", "title": "Impossible to compare", "body": "Two videos both say “last year.” Which came first? Relative dates simply won’t tell you." }
+      ]
+    },
+    "how": {
+      "kicker": "How it works",
+      "title": "One popup. Every date, exactly your way.",
+      "body": "Open the extension popup and shape the timestamp however you read it best — the change lands on every video instantly.",
+      "points": [
+        { "icon": "moon-stars", "title": "Gregorian or Hijri", "body": "Pick the calendar you actually think in." },
+        { "icon": "sliders-horizontal", "title": "Every field, your style", "body": "Weekday, day, month and year — long, short, narrow, numeric, 2-digit, or off." },
+        { "icon": "eye", "title": "Live bilingual preview", "body": "See the result in Arabic and English before you save." }
+      ]
+    },
+    "benefits": {
+      "kicker": "Why you’ll keep it on",
+      "items": [
+        { "icon": "calendar-check", "title": "Absolute timestamps", "body": "See the exact publish date on every video instead of a vague “x ago.”" },
+        { "icon": "sliders-horizontal", "title": "Your format, your rules", "body": "Pick weekday, day, month and year styles — long, short, numeric, 2-digit, or hidden." },
+        { "icon": "moon-stars", "title": "Hijri & Gregorian", "body": "Switch calendars in one tap — 16 Ramadan 1447 AH or 5 January 2026." },
+        { "icon": "translate", "title": "Bilingual preview", "body": "Watch the date update live in Arabic and English as you tweak it." }
+      ]
+    },
+    "install": {
+      "title": "See every date as it really is.",
+      "sub": "Available now. Free and open source — set your format once and every video shows its true date."
+    }
+  },
+  "placeholder": {
+    "body": "The full walkthrough for this feature is on its way — the live demo above already shows it in action."
+  },
+  "popup": {
+    "tabs": { "date": "Date", "scroll": "Infinite Scroll", "support": "Support" },
+    "groups": {
+      "calendar": "Date Type",
+      "weekday": "Weekday Format",
+      "day": "Day Format",
+      "month": "Month Format",
+      "year": "Year Format"
+    },
+    "options": {
+      "gregory": "Gregorian",
+      "islamic": "Hijri",
+      "none": "None"
+    },
+    "preview": {
+      "label": "Preview",
+      "arabic": "ARABIC",
+      "english": "ENGLISH"
+    }
+  },
+  "footer": {
+    "tagline": "Not affiliated with YouTube. Made for people who'd rather choose."
+  }
+}

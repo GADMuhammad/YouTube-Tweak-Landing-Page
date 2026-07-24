@@ -1,0 +1,17 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(1100px 700px at 50% -220px, color-mix(in srgb, var(--color-accent-900) 42%, transparent), transparent 60%),
+    var(--color-bg);
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 1240px;
+  background:
+    radial-gradient(1100px 700px at 82% -180px, color-mix(in srgb, var(--color-accent-900) 68%, transparent), transparent 60%),
+    radial-gradient(900px 800px at -8% 108%, color-mix(in srgb, black 30%, transparent), transparent 55%);
+  color: var(--color-text);
+}

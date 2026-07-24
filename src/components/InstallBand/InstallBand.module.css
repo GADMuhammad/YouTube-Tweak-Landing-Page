@@ -1,0 +1,75 @@
+.band {
+  padding: 64px 48px;
+  text-align: center;
+  background:
+    radial-gradient(900px 420px at 50% -40%, color-mix(in srgb, var(--color-section-glow) 70%, transparent), transparent 64%),
+    var(--color-section);
+}
+
+.title {
+  font-size: 34px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+  color: var(--color-text);
+}
+
+html[dir='rtl'] .title {
+  line-height: 1.35;
+}
+
+.sub {
+  font-size: 15.5px;
+  line-height: 1.55;
+  margin: 0 auto 30px;
+  max-width: 48ch;
+  color: color-mix(in srgb, var(--color-text) 78%, transparent);
+}
+
+html[dir='rtl'] .sub {
+  line-height: 1.6;
+}
+
+.ctas {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.ctaPrimary {
+  border-color: var(--color-text);
+  background: var(--color-text);
+  color: var(--color-section);
+  font-weight: 700;
+  transition: filter 0.15s;
+}
+
+.ctaPrimary:hover {
+  filter: brightness(1.08);
+}
+
+.ctaSecondary {
+  padding-inline: 24px;
+  border-color: rgba(255, 255, 255, 0.35);
+  color: var(--color-text);
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.ctaSecondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

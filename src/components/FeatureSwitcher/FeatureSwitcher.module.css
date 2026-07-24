@@ -1,0 +1,86 @@
+.wrap {
+  padding: 34px 48px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.kicker {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-300);
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--color-neutral-700);
+  background: transparent;
+  color: color-mix(in srgb, var(--color-text) 76%, transparent);
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tab.active {
+  border-color: transparent;
+  background: var(--color-accent);
+  color: #161826;
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--color-accent) 38%, transparent);
+}
+
+.tab.disabled {
+  color: color-mix(in srgb, var(--color-text) 34%, transparent);
+  cursor: not-allowed;
+}
+
+.lock {
+  opacity: 0.6;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 9px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 11px;
+  border-radius: 7px;
+  background: var(--color-neutral-800);
+  border: 1px solid var(--color-neutral-700);
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 11.5px;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.14s;
+}
+
+.tab.disabled:hover .tooltip {
+  opacity: 1;
+}
+
+.tooltipArrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--color-neutral-800);
+}

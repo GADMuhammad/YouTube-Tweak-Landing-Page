@@ -1,0 +1,91 @@
+/* Nocturne-derived tokens used by this landing page. */
+:root {
+  --color-bg: #0c0d15;
+  --color-surface: #161826;
+  --color-text: #e9e9ed;
+  --color-accent: #9184d9;
+  --color-accent-300: #d2cefd;
+  --color-accent-900: #2b2741;
+
+  --color-neutral-600: #75798c;
+  --color-neutral-700: #595d6c;
+  --color-neutral-800: #3f424d;
+
+  --color-section: #262a60;
+  --color-section-glow: #353b80;
+
+  --brand-red-start: #ff2b2b;
+  --brand-red-end: #e60000;
+
+  --popup-bg: #f3f3f5;
+  --popup-track: #eeeef1;
+  --popup-tabbar: #e6e6ea;
+  --popup-white: #fff;
+  --popup-muted: #9a9aa2;
+  --popup-chip-off: #8a8a92;
+  --popup-text: #1a1a20;
+  --popup-accent: #e8613a;
+
+  --font-en: 'Inter', system-ui, sans-serif;
+  --font-ar-body: 'Tajawal', 'Inter', system-ui, sans-serif;
+  --font-ar-heading: 'Noto Kufi Arabic', 'Inter', system-ui, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 24px 70px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-en);
+}
+
+html[dir='rtl'] body {
+  font-family: var(--font-ar-body);
+}
+
+html[dir='rtl'] h1,
+html[dir='rtl'] h2 {
+  font-family: var(--font-ar-heading);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-en);
+  font-weight: 600;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
