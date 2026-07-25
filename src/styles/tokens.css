@@ -89,3 +89,58 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* Scroll-triggered reveal animations. An IntersectionObserver (see
+   src/hooks/useReveal.ts) adds .in-view to a section once it scrolls into
+   the viewport; these rules transition it (and its descendants) in. */
+.reveal,
+.reveal-item,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal,
+.reveal-item {
+  transform: translateY(28px);
+}
+
+.reveal-left {
+  transform: translateX(-32px);
+}
+
+.reveal-right {
+  transform: translateX(32px);
+}
+
+.reveal.in-view,
+.in-view .reveal-item,
+.in-view .reveal-left,
+.in-view .reveal-right {
+  opacity: 1;
+  transform: none;
+}
+
+.in-view .reveal-item:nth-child(2) {
+  transition-delay: 0.08s;
+}
+
+.in-view .reveal-item:nth-child(3) {
+  transition-delay: 0.16s;
+}
+
+.in-view .reveal-item:nth-child(4) {
+  transition-delay: 0.24s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-item,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

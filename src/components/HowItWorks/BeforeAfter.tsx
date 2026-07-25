@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Infinity as InfinityIcon, CheckCircle, ArrowLineDown } from '@phosphor-icons/react';
 import type { Video } from '../../data/videos';
+import { useReveal } from '../../hooks/useReveal';
 import styles from './BeforeAfter.module.css';
 
 interface BeforeAfterProps {
@@ -12,13 +13,14 @@ interface BeforeAfterProps {
 export default function BeforeAfter({ kicker, title, videos }: BeforeAfterProps) {
   const { t } = useTranslation();
   const feedTop = videos.slice(0, 3);
+  const { ref, inView } = useReveal<HTMLDivElement>();
 
   return (
-    <div className={styles.section}>
+    <div ref={ref} className={`${styles.section} reveal${inView ? ' in-view' : ''}`}>
       <span className={styles.kicker}>{kicker}</span>
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.grid}>
-        <div className={styles.panel}>
+        <div className={`${styles.panel} reveal-left`}>
           <div className={styles.panelHeader}>
             <span className={styles.panelLabel}>
               <InfinityIcon size={17} weight="bold" className={styles.beforeIcon} />
@@ -39,7 +41,7 @@ export default function BeforeAfter({ kicker, title, videos }: BeforeAfterProps)
           </div>
         </div>
 
-        <div className={[styles.panel, styles.panelActive].join(' ')}>
+        <div className={[styles.panel, styles.panelActive, 'reveal-right'].join(' ')}>
           <div className={styles.panelHeader}>
             <span className={styles.panelLabel}>
               <CheckCircle size={17} weight="fill" className={styles.afterIcon} />
