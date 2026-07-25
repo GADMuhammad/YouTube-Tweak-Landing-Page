@@ -1,17 +1,26 @@
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
-  const [inView, setInView] = useState(false);
+  const [inView, setInView] = useState(() => typeof IntersectionObserver === 'undefined');
+  const { i18n } = useTranslation();
+  const mounted = useRef(false);
+
+  // Re-arm the reveal on every language change so the whole page replays
+  // its reveal consistently, instead of leaving on-screen sections revealed
+  // while off-screen ones reset (which read as sections randomly vanishing).
+  useEffect(() => {
+    if (!mounted.current) {
+      mounted.current = true;
+      return;
+    }
+    setInView(false);
+  }, [i18n.language]);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
-
-    if (typeof IntersectionObserver === 'undefined') {
-      setInView(true);
-      return;
-    }
+    if (!el || inView) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -25,7 +34,7 @@ export function useReveal<T extends HTMLElement>() {
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [inView]);
 
   return { ref, inView };
 }
