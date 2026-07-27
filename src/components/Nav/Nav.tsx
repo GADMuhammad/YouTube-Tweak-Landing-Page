@@ -8,7 +8,7 @@ interface NavProps {
   onToggleLang: () => void;
 }
 
-const CHROME_URL = '#';
+const CHROME_URL = 'https://chromewebstore.google.com/detail/youtube-tweak/oboblbfbeolffgmhmgkjaaamelcmncoi';
 
 export default function Nav({ onToggleLang }: NavProps) {
   const { t } = useTranslation();
@@ -26,7 +26,7 @@ export default function Nav({ onToggleLang }: NavProps) {
           <Translate size={15} weight="bold" className={styles.langIcon} />
           {t('nav.otherLangLabel')}
         </button>
-        <a href={CHROME_URL} className={styles.chromeBtn}>
+        <a href={CHROME_URL} target="_blank" rel="noreferrer" className={styles.chromeBtn}>
           <Plus size={15} weight="bold" />
           {t('nav.addToChrome')}
         </a>
