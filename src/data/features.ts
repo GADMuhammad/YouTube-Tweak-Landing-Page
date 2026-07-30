@@ -14,6 +14,6 @@ export interface FeatureMeta {
 export const FEATURES: FeatureMeta[] = [
   { icon: HandPalm, disabled: false },
   { icon: CalendarCheck, disabled: false },
-  { icon: MagnifyingGlass, disabled: true },
+  { icon: MagnifyingGlass, disabled: false },
   { icon: EyeSlash, disabled: true },
 ];

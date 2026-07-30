@@ -6,6 +6,7 @@ import FeatureSwitcher from './components/FeatureSwitcher/FeatureSwitcher';
 import Footer from './components/Footer/Footer';
 import Feature0Page from './pages/Feature0Page';
 import Feature1Page from './pages/Feature1Page';
+import Feature2Page from './pages/Feature2Page';
 import PlaceholderPage from './pages/PlaceholderPage';
 import styles from './App.module.css';
 
@@ -32,7 +33,8 @@ function App() {
         <FeatureSwitcher feat={feat} onSelect={setFeat} />
         {feat === 0 && <Feature0Page lang={lang} />}
         {feat === 1 && <Feature1Page lang={lang} />}
-        {(feat === 2 || feat === 3) && <PlaceholderPage feat={feat} />}
+        {feat === 2 && <Feature2Page lang={lang} />}
+        {feat === 3 && <PlaceholderPage feat={feat} />}
         <Footer />
       </div>
     </div>

@@ -1,0 +1,131 @@
+.popup {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  background: var(--popup-bg);
+  border-radius: var(--radius-xl);
+  padding: 14px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 4px 12px;
+}
+
+.logo {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, var(--brand-red-start), var(--brand-red-end));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.wordmark {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--popup-text);
+}
+
+.tabbar {
+  display: flex;
+  gap: 4px;
+  background: var(--popup-tabbar);
+  border-radius: 13px;
+  padding: 5px;
+  margin-bottom: 14px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 9px 6px;
+  border-radius: 9px;
+  color: #a2a2aa;
+  font-weight: 600;
+  font-size: 11.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tabActive {
+  background: var(--popup-white);
+  color: var(--popup-text);
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background: var(--popup-white);
+  border-radius: 15px;
+  padding: 14px;
+}
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 12px;
+  border-radius: 10px;
+  background: var(--popup-track);
+  border: 1.5px solid var(--brand-red-end);
+  margin-bottom: 10px;
+}
+
+.searchIcon {
+  color: var(--popup-muted);
+  flex: none;
+}
+
+.query {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--popup-text);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 6px;
+  border-radius: 8px;
+}
+
+.rowIcon {
+  color: var(--popup-muted);
+  flex: none;
+}
+
+.rowText {
+  flex: 1;
+  min-width: 0;
+  font-size: 12.5px;
+  color: var(--popup-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shortcut {
+  flex: none;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--popup-muted);
+  background: var(--popup-track);
+  padding: 3px 6px;
+  border-radius: 5px;
+}

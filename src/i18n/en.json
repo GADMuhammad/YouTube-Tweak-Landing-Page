@@ -113,11 +113,56 @@
       "sub": "Available now. Free and open source — set your format once and every video shows its true date."
     }
   },
+  "feat2": {
+    "mock": {
+      "query": "how to build systems",
+      "caption": "Live YouTube suggestions — open one without leaving the page.",
+      "suggestions": [
+        "how to build systems that work",
+        "how to build systems that stick",
+        "how to build systems thinking",
+        "how to build systems james clear",
+        "how to build systems in notion"
+      ]
+    },
+    "problem": {
+      "kicker": "The problem",
+      "title": "Every search starts by leaving what you're watching.",
+      "items": [
+        { "icon": "sign-out", "title": "You lose your place", "body": "Opening youtube.com to search means abandoning the page — or video — you were already on." },
+        { "icon": "arrows-clockwise", "title": "The same steps, every time", "body": "New tab, load YouTube, click the box, then finally type. Four moves for one search." },
+        { "icon": "magnet-straight", "title": "The feed grabs you first", "body": "You meant to search one thing — but the home feed pulls you in before you get the chance." }
+      ]
+    },
+    "how": {
+      "kicker": "How it works",
+      "title": "Hit Enter. You're on the results.",
+      "body": "Open the popup from any page and start typing. Real YouTube suggestions appear instantly — pick one and land straight on the results.",
+      "points": [
+        { "icon": "lightning", "title": "Live YouTube suggestions", "body": "Real autocomplete as you type, in your language." },
+        { "icon": "keyboard", "title": "Keyboard-first", "body": "⌘/Ctrl + 1–9 to open a result, arrows to move, Enter to go." },
+        { "icon": "text-aa", "title": "Searches your selection", "body": "Highlight text on any page — the box opens pre-filled, ready to search." }
+      ]
+    },
+    "benefits": {
+      "kicker": "Why you'll keep it on",
+      "items": [
+        { "icon": "magnifying-glass", "title": "Search from anywhere", "body": "Reach YouTube search from any tab — no need to open the site first." },
+        { "icon": "lightning", "title": "Live suggestions", "body": "Real YouTube autocomplete, in English and Arabic, the moment you type." },
+        { "icon": "keyboard", "title": "Keyboard shortcuts", "body": "⌘/Ctrl + a number opens that result instantly; arrows and Enter do the rest." },
+        { "icon": "cursor-click", "title": "Right-click to search", "body": "Select text anywhere and pick “Search on YouTube” — results open in a new tab, keeping your place." }
+      ]
+    },
+    "install": {
+      "title": "Search YouTube without opening YouTube.",
+      "sub": "Available now. Free and open source — one keystroke to any video, from wherever you are."
+    }
+  },
   "placeholder": {
     "body": "The full walkthrough for this feature is on its way — the live demo above already shows it in action."
   },
   "popup": {
-    "tabs": { "date": "Date", "scroll": "Infinite Scroll", "support": "Support" },
+    "tabs": { "quickSearch": "Quick Search", "date": "Date", "scroll": "Infinite Scroll", "support": "Support" },
     "groups": {
       "calendar": "Date Type",
       "weekday": "Weekday Format",
