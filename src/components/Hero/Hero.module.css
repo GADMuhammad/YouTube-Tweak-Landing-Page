@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.heroWide {
+  grid-template-columns: 520px 1fr;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;

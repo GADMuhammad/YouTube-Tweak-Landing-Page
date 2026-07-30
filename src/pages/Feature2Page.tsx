@@ -25,7 +25,7 @@ export default function Feature2Page({ lang }: { lang: Lang }) {
 
   return (
     <>
-      <Hero title={t('features.2.title')} sub={t('features.2.sub')} mock={<Feat2Mock />} />
+      <Hero title={t('features.2.title')} sub={t('features.2.sub')} mock={<Feat2Mock />} wideText />
       <Problem kicker={t('feat2.problem.kicker')} title={t('feat2.problem.title')} items={problemItems} />
       <QuickSearchSection
         lang={lang}
