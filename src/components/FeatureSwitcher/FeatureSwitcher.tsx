@@ -4,8 +4,8 @@ import { FEATURES } from '../../data/features';
 import styles from './FeatureSwitcher.module.css';
 
 interface FeatureSwitcherProps {
-  feat: 0 | 1 | 2 | 3;
-  onSelect: (feat: 0 | 1 | 2 | 3) => void;
+  feat: 0 | 1 | 2 | 3 | 4;
+  onSelect: (feat: 0 | 1 | 2 | 3 | 4) => void;
 }
 
 export default function FeatureSwitcher({ feat, onSelect }: FeatureSwitcherProps) {
@@ -23,7 +23,7 @@ export default function FeatureSwitcher({ feat, onSelect }: FeatureSwitcherProps
               key={i}
               type="button"
               disabled={f.disabled}
-              onClick={() => !f.disabled && onSelect(i as 0 | 1 | 2 | 3)}
+              onClick={() => !f.disabled && onSelect(i as 0 | 1 | 2 | 3 | 4)}
               className={[
                 styles.tab,
                 active ? styles.active : '',

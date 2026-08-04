@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Sparkle } from '@phosphor-icons/react';
 import styles from './PlaceholderPage.module.css';
 
-export default function PlaceholderPage({ feat }: { feat: 3 }) {
+export default function PlaceholderPage({ feat }: { feat: 4 }) {
   const { t } = useTranslation();
 
   return (
