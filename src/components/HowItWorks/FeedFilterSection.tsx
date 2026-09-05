@@ -3,7 +3,6 @@ import type { Icon } from '@phosphor-icons/react';
 import Feat3Mock from '../YouTubeMock/Feat3Mock';
 import type { Video } from '../../data/videos';
 import type { Lang } from '../../App';
-import { useReveal } from '../../hooks/useReveal';
 import styles from './FeedFilterSection.module.css';
 
 const POINT_ICONS: Record<string, Icon> = {
@@ -49,10 +48,9 @@ export default function FeedFilterSection({ lang, kicker, title, body, points, v
   );
 
   const mock = <Feat3Mock videos={videos} lang={lang} />;
-  const { ref, inView } = useReveal<HTMLDivElement>();
 
   return (
-    <div ref={ref} className={`${styles.section} reveal${inView ? ' in-view' : ''}`}>
+    <div className={`${styles.section} reveal`}>
       <span className={styles.kicker}>{kicker}</span>
       <h2 className={styles.title}>{title}</h2>
       <div className={[styles.grid, lang === 'ar' ? styles.gridAr : ''].join(' ')}>

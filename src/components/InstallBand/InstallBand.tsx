@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { Plus, GithubLogo } from '@phosphor-icons/react';
-import { useReveal } from '../../hooks/useReveal';
 import styles from './InstallBand.module.css';
 
 const CHROME_URL = 'https://chromewebstore.google.com/detail/youtube-tweak/oboblbfbeolffgmhmgkjaaamelcmncoi';
@@ -13,10 +12,9 @@ interface InstallBandProps {
 
 export default function InstallBand({ title, sub }: InstallBandProps) {
   const { t } = useTranslation();
-  const { ref, inView } = useReveal<HTMLDivElement>();
 
   return (
-    <div ref={ref} className={`${styles.band} reveal${inView ? ' in-view' : ''}`}>
+    <div className={`${styles.band} reveal`}>
       <h2 className={styles.title}>{title}</h2>
       <p className={styles.sub}>{sub}</p>
       <div className={styles.ctas}>

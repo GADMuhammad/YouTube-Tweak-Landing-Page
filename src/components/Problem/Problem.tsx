@@ -1,5 +1,4 @@
 import type { Icon } from '@phosphor-icons/react';
-import { useReveal } from '../../hooks/useReveal';
 import styles from './Problem.module.css';
 
 export interface ProblemItem {
@@ -16,9 +15,8 @@ interface ProblemProps {
 }
 
 export default function Problem({ kicker, title, items }: ProblemProps) {
-  const { ref, inView } = useReveal<HTMLDivElement>();
   return (
-    <div ref={ref} className={`${styles.section} reveal${inView ? ' in-view' : ''}`}>
+    <div className={`${styles.section} reveal`}>
       <span className={styles.kicker}>{kicker}</span>
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.grid}>

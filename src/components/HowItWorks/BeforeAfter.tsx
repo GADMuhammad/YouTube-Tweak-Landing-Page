@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Infinity as InfinityIcon, CheckCircle, ArrowLineDown } from '@phosphor-icons/react';
 import type { Video } from '../../data/videos';
-import { useReveal } from '../../hooks/useReveal';
 import styles from './BeforeAfter.module.css';
 
 interface BeforeAfterProps {
@@ -13,10 +12,9 @@ interface BeforeAfterProps {
 export default function BeforeAfter({ kicker, title, videos }: BeforeAfterProps) {
   const { t } = useTranslation();
   const feedTop = videos.slice(0, 3);
-  const { ref, inView } = useReveal<HTMLDivElement>();
 
   return (
-    <div ref={ref} className={`${styles.section} reveal${inView ? ' in-view' : ''}`}>
+    <div className={`${styles.section} reveal`}>
       <span className={styles.kicker}>{kicker}</span>
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.grid}>

@@ -2,7 +2,6 @@ import { MoonStars, SlidersHorizontal, Eye } from '@phosphor-icons/react';
 import type { Icon } from '@phosphor-icons/react';
 import DatePopup from '../DatePopup/DatePopup';
 import type { Lang } from '../../App';
-import { useReveal } from '../../hooks/useReveal';
 import styles from './DatePopupSection.module.css';
 
 const POINT_ICONS: Record<string, Icon> = {
@@ -47,10 +46,9 @@ export default function DatePopupSection({ lang, kicker, title, body, points }: 
   );
 
   const popup = <DatePopup lang={lang} />;
-  const { ref, inView } = useReveal<HTMLDivElement>();
 
   return (
-    <div ref={ref} className={`${styles.section} reveal${inView ? ' in-view' : ''}`}>
+    <div className={`${styles.section} reveal`}>
       <span className={styles.kicker}>{kicker}</span>
       <h2 className={styles.title}>{title}</h2>
       <div className={[styles.grid, lang === 'ar' ? styles.gridAr : ''].join(' ')}>

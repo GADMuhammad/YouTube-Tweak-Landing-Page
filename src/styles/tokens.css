@@ -50,6 +50,7 @@ body {
 }
 
 body {
+  overflow-x: hidden;
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-en);
@@ -106,48 +107,77 @@ img {
   color: var(--color-text);
 }
 
-/* Scroll-triggered reveal animations. An IntersectionObserver (see
-   src/hooks/useReveal.ts) adds .in-view to a section once it scrolls into
-   the viewport; these rules transition it (and its descendants) in. */
-.reveal,
-.reveal-item,
-.reveal-left,
-.reveal-right {
-  opacity: 0;
-  transition: opacity 0.7s ease, transform 0.7s ease;
+/* Scroll-driven reveal animations. No JS: each element's own progress
+   through the viewport (view-progress timeline) scrubs the keyframes
+   directly, so the reveal advances and reverses with scroll instead of
+   firing once via IntersectionObserver. Browsers without support for
+   animation-timeline: view() just see the elements fully visible. */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-.reveal,
-.reveal-item {
-  transform: translateY(28px);
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-.reveal-left {
-  transform: translateX(-32px);
+@keyframes reveal-right {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-.reveal-right {
-  transform: translateX(32px);
-}
+@supports (animation-timeline: view()) {
+  .reveal,
+  .reveal-item {
+    animation: reveal-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
 
-.reveal.in-view,
-.in-view .reveal-item,
-.in-view .reveal-left,
-.in-view .reveal-right {
-  opacity: 1;
-  transform: none;
-}
+  .reveal-left {
+    animation: reveal-left linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
 
-.in-view .reveal-item:nth-child(2) {
-  transition-delay: 0.08s;
-}
+  .reveal-right {
+    animation: reveal-right linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
 
-.in-view .reveal-item:nth-child(3) {
-  transition-delay: 0.16s;
-}
+  /* Stagger grouped items by shifting each one's own range later,
+     approximating the old per-item transition-delay. */
+  .reveal-item:nth-child(2) {
+    animation-range: entry 8% entry 68%;
+  }
 
-.in-view .reveal-item:nth-child(4) {
-  transition-delay: 0.24s;
+  .reveal-item:nth-child(3) {
+    animation-range: entry 16% entry 76%;
+  }
+
+  .reveal-item:nth-child(4) {
+    animation-range: entry 24% entry 84%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -155,8 +185,8 @@ img {
   .reveal-item,
   .reveal-left,
   .reveal-right {
+    animation: none !important;
     opacity: 1 !important;
     transform: none !important;
-    transition: none !important;
   }
 }

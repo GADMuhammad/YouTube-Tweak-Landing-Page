@@ -1,5 +1,4 @@
 import type { Icon } from '@phosphor-icons/react';
-import { useReveal } from '../../hooks/useReveal';
 import styles from './Benefits.module.css';
 
 export interface BenefitItem {
@@ -15,9 +14,8 @@ interface BenefitsProps {
 }
 
 export default function Benefits({ kicker, items, columns = 3 }: BenefitsProps) {
-  const { ref, inView } = useReveal<HTMLDivElement>();
   return (
-    <div ref={ref} className={`${styles.section} reveal${inView ? ' in-view' : ''}`}>
+    <div className={`${styles.section} reveal`}>
       <span className={styles.kicker}>{kicker}</span>
       <div className={styles.grid} style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
         {items.map((item, i) => {

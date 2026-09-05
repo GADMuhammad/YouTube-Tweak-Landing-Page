@@ -1,6 +1,5 @@
 .page {
   min-height: 100vh;
-  overflow-x: hidden;
   background: var(--color-bg);
   display: flex;
   justify-content: center;

@@ -2,7 +2,6 @@ import { Lightning, Keyboard, TextAa } from '@phosphor-icons/react';
 import type { Icon } from '@phosphor-icons/react';
 import QuickSearchPopup from '../QuickSearchPopup/QuickSearchPopup';
 import type { Lang } from '../../App';
-import { useReveal } from '../../hooks/useReveal';
 import styles from './DatePopupSection.module.css';
 
 const POINT_ICONS: Record<string, Icon> = {
@@ -47,10 +46,9 @@ export default function QuickSearchSection({ lang, kicker, title, body, points }
   );
 
   const popup = <QuickSearchPopup lang={lang} />;
-  const { ref, inView } = useReveal<HTMLDivElement>();
 
   return (
-    <div ref={ref} className={`${styles.section} reveal${inView ? ' in-view' : ''}`}>
+    <div className={`${styles.section} reveal`}>
       <span className={styles.kicker}>{kicker}</span>
       <h2 className={styles.title}>{title}</h2>
       <div className={[styles.grid, lang === 'ar' ? styles.gridAr : ''].join(' ')}>
