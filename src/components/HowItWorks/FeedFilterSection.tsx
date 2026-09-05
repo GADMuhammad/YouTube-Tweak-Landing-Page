@@ -1,12 +1,12 @@
-import { Funnel, MonitorPlay, Lightning } from '@phosphor-icons/react';
+import { Funnel, FolderSimple, MonitorPlay, Lightning } from '@phosphor-icons/react';
 import type { Icon } from '@phosphor-icons/react';
-import Feat3Mock from '../YouTubeMock/Feat3Mock';
-import type { Video } from '../../data/videos';
+import FoldersMock from '../YouTubeMock/FoldersMock';
 import type { Lang } from '../../App';
 import styles from './FeedFilterSection.module.css';
 
 const POINT_ICONS: Record<string, Icon> = {
   funnel: Funnel,
+  'folder-simple': FolderSimple,
   'monitor-play': MonitorPlay,
   lightning: Lightning,
 };
@@ -23,10 +23,9 @@ interface FeedFilterSectionProps {
   title: string;
   body: string;
   points: Point[];
-  videos: Video[];
 }
 
-export default function FeedFilterSection({ lang, kicker, title, body, points, videos }: FeedFilterSectionProps) {
+export default function FeedFilterSection({ lang, kicker, title, body, points }: FeedFilterSectionProps) {
   const text = (
     <div dir={lang === 'ar' ? 'rtl' : undefined}>
       <p className={styles.body}>{body}</p>
@@ -47,7 +46,7 @@ export default function FeedFilterSection({ lang, kicker, title, body, points, v
     </div>
   );
 
-  const mock = <Feat3Mock videos={videos} lang={lang} />;
+  const mock = <FoldersMock lang={lang} />;
 
   return (
     <div className={`${styles.section} reveal`}>

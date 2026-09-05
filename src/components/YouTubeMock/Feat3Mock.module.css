@@ -8,19 +8,39 @@
 
 .pillRow {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px 10px;
+  gap: 10px;
 }
 
 .pills {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  flex: 1;
+  flex-wrap: nowrap;
   gap: 8px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.pills::-webkit-scrollbar {
+  display: none;
+}
+
+.pillDivider {
+  flex: none;
+  width: 1px;
+  height: 16px;
+  background: var(--color-divider);
+  margin-inline: 2px;
 }
 
 .pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex: none;
   padding: 7px 14px;
   border-radius: 999px;
   font-weight: 600;
@@ -36,6 +56,7 @@
 }
 
 .allSubs {
+  flex: none;
   padding: 7px 14px;
   border-radius: 999px;
   font-weight: 600;

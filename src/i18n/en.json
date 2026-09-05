@@ -29,7 +29,7 @@
     "3": {
       "tab": "Feed filtering",
       "title": "Your subscriptions, your rules.",
-      "sub": "Swap YouTube's “Latest” heading for Videos / Shorts toggles right on your Subscriptions feed — see only long-form or only Shorts, instead of the mix YouTube picks for you."
+      "sub": "Swap YouTube's “Latest” heading for Videos / Shorts toggles plus custom Folders on your Subscriptions feed — see only long-form, only Shorts, or one topic at a time, instead of the mix YouTube picks for you."
     },
     "4": {
       "tab": "Hide videos by keyword",
@@ -167,8 +167,10 @@
     "mock": {
       "videosTab": "Videos",
       "shortsTab": "Shorts",
+      "folderTabs": ["Tech", "News", "Music", "Gaming"],
+      "foldersBtn": "Folders",
       "allSubs": "All subscriptions",
-      "caption": "Filter your Subscriptions feed to just videos — or just Shorts."
+      "caption": "Filter by Videos or Shorts — or drill into a folder you've grouped yourself."
     },
     "problem": {
       "kicker": "The problem",
@@ -176,15 +178,16 @@
       "items": [
         { "icon": "shuffle", "title": "Videos and Shorts, all jumbled", "body": "Your Subscriptions feed blends long-form and Shorts into one stream — you can't focus on either." },
         { "icon": "timer", "title": "Shorts hijack the visit", "body": "You came for a real video and got pulled into an endless reel of thirty-second clips instead." },
-        { "icon": "eye-slash", "title": "No built-in way to split them", "body": "YouTube gives you a single “Latest” heading and no toggle to see just one kind of content." }
+        { "icon": "eye-slash", "title": "No built-in way to split them", "body": "YouTube gives you a single “Latest” heading and no toggle to see just one kind of content, let alone one topic." }
       ]
     },
     "how": {
       "kicker": "How it works",
-      "title": "Two toggles where “Latest” used to be.",
-      "body": "YouTube Tweak replaces YouTube's “Latest” title with two pill toggles — Videos and Shorts — sitting on the same row as YouTube's own “All subscriptions” button. One tap filters your whole feed.",
+      "title": "Videos, Shorts, and your own folders.",
+      "body": "YouTube Tweak adds a filter bar right next to YouTube's own “All subscriptions” button — Videos and Shorts toggles, plus Folders. Sort your subscribed channels into folders once, then filter your whole feed down to a single topic with a tap.",
       "points": [
         { "icon": "funnel", "title": "One-tap filtering", "body": "Videos shows only long-form; Shorts shows only Shorts." },
+        { "icon": "folder-simple", "title": "Sort channels into folders", "body": "Assign every subscription from one searchable panel, then filter your feed down to just that folder. Sign in once — it syncs across your devices." },
         { "icon": "monitor-play", "title": "Looks completely native", "body": "Matches YouTube's own chips and follows light/dark theme — you'd never know it's an extension." },
         { "icon": "lightning", "title": "Instant, no reload", "body": "Reuses YouTube's own client-side navigation — the active toggle always reflects the page you're on." }
       ]
@@ -194,13 +197,24 @@
       "items": [
         { "icon": "funnel", "title": "Reclaim your feed", "body": "You decide whether you're watching videos or Shorts — not YouTube's default mix." },
         { "icon": "devices", "title": "Works both ways", "body": "Present and active on both the Subscriptions page and the Shorts sub-page." },
-        { "icon": "moon-stars", "title": "Theme-matched", "body": "Follows YouTube's light and dark modes automatically — always looks stock." },
+        { "icon": "folder-simple", "title": "Organize by topic", "body": "Group channels into folders once — your setup syncs to your account across every device." },
         { "icon": "lightning", "title": "No jarring reloads", "body": "Native client-side transitions keep switching instant and aligned with YouTube's own button." }
       ]
     },
     "install": {
       "title": "Take back your subscription feed.",
-      "sub": "Free and open source. Videos or Shorts — you choose, one tap, right where YouTube's heading used to be."
+      "sub": "Free and open source. Videos, Shorts, or your own folders — one tap, right where YouTube's heading used to be."
+    },
+    "foldersMock": {
+      "title": "Subscription folders",
+      "subtitle": "Sort your subscribed channels into folders, then filter the feed by folder.",
+      "signIn": "Sign in",
+      "accountLabel": "YouTube account",
+      "accountValue": "you@gmail.com",
+      "accountHint": "Linked to the account you're signed into on YouTube.",
+      "passwordLabel": "Password",
+      "forgot": "Forgot password?",
+      "signInBtn": "Sign in"
     }
   },
   "placeholder": {

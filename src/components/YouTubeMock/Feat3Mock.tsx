@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Gear } from '@phosphor-icons/react';
 import type { Video } from '../../data/videos';
 import type { Lang } from '../../App';
 import BrowserChrome from './BrowserChrome';
@@ -12,6 +13,7 @@ interface Feat3MockProps {
 export default function Feat3Mock({ videos, lang }: Feat3MockProps) {
   const { t } = useTranslation();
   const feedTop = videos.slice(0, 4);
+  const folderTabs = t('feat3.mock.folderTabs', { returnObjects: true }) as string[];
 
   return (
     <BrowserChrome>
@@ -20,6 +22,16 @@ export default function Feat3Mock({ videos, lang }: Feat3MockProps) {
           <div className={styles.pills}>
             <span className={[styles.pill, styles.pillActive].join(' ')}>{t('feat3.mock.videosTab')}</span>
             <span className={styles.pill}>{t('feat3.mock.shortsTab')}</span>
+            <span className={styles.pillDivider} />
+            {folderTabs.map((f, i) => (
+              <span className={styles.pill} key={i}>
+                {f}
+              </span>
+            ))}
+            <span className={styles.pill}>
+              <Gear size={12} weight="bold" />
+              {t('feat3.mock.foldersBtn')}
+            </span>
           </div>
           <span className={styles.allSubs}>{t('feat3.mock.allSubs')}</span>
         </div>

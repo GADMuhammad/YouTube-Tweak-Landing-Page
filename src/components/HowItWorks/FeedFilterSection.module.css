@@ -28,13 +28,13 @@ html[dir='rtl'] .title {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 460px;
+  grid-template-columns: 1fr 380px;
   gap: 40px;
   align-items: center;
 }
 
 .gridAr {
-  grid-template-columns: 460px 1fr;
+  grid-template-columns: 380px 1fr;
   direction: ltr;
 }
 

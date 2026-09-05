@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Shuffle, Timer, EyeSlash, Funnel, Devices, MoonStars, Lightning } from '@phosphor-icons/react';
+import { Shuffle, Timer, EyeSlash, Funnel, Devices, FolderSimple, Lightning } from '@phosphor-icons/react';
 import Hero from '../components/Hero/Hero';
 import Feat3Mock from '../components/YouTubeMock/Feat3Mock';
 import Problem from '../components/Problem/Problem';
@@ -20,7 +20,7 @@ export default function Feature3Page({ lang }: { lang: Lang }) {
 
   const points = t('feat3.how.points', { returnObjects: true }) as { icon: string; title: string; body: string }[];
 
-  const benefitIcons = [Funnel, Devices, MoonStars, Lightning];
+  const benefitIcons = [Funnel, Devices, FolderSimple, Lightning];
   const benefitItems = (t('feat3.benefits.items', { returnObjects: true }) as { title: string; body: string }[]).map(
     (item, i) => ({ ...item, icon: benefitIcons[i] }),
   );
@@ -35,7 +35,6 @@ export default function Feature3Page({ lang }: { lang: Lang }) {
         title={t('feat3.how.title')}
         body={t('feat3.how.body')}
         points={points}
-        videos={videos}
       />
       <Benefits kicker={t('feat3.benefits.kicker')} items={benefitItems} columns={4} />
       <InstallBand title={t('feat3.install.title')} sub={t('feat3.install.sub')} />
