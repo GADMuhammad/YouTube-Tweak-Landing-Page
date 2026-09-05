@@ -1,6 +1,6 @@
 .body {
   padding: 18px;
-  background: #0f0f0f;
+  background: #fff;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -10,14 +10,14 @@
   display: flex;
   gap: 12px;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-divider);
   border-radius: 10px;
   padding: 11px;
 }
 
 .rowActive {
   border-color: color-mix(in srgb, var(--color-accent) 40%, transparent);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-accent) 12%, transparent), 0 10px 26px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-accent) 12%, transparent);
 }
 
 .thumbWrap {
@@ -27,7 +27,7 @@
   aspect-ratio: 16 / 9;
   border-radius: 7px;
   overflow: hidden;
-  background: #151826;
+  background: var(--color-neutral-200);
 }
 
 .thumb {
@@ -73,20 +73,20 @@ html[dir='rtl'] .duration {
 }
 
 .badgeRelative {
-  color: #9a9aa2;
-  background: #242427;
+  color: #606060;
+  background: var(--color-neutral-200);
 }
 
 .badgeActual {
-  color: var(--color-accent-300);
-  background: color-mix(in srgb, var(--color-accent) 16%, transparent);
+  color: var(--color-accent-700);
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
 }
 
 .title {
   font-weight: 500;
   font-size: 13px;
   line-height: 1.3;
-  color: #f1f1f1;
+  color: #0f0f0f;
   margin-bottom: 6px;
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -97,20 +97,20 @@ html[dir='rtl'] .duration {
 .meta {
   font-size: 12px;
   line-height: 1.4;
-  color: #aaa;
+  color: #606060;
 }
 
 .metaValue {
-  color: #f1f1f1;
-  background: #333;
+  color: #0f0f0f;
+  background: var(--color-neutral-200);
   padding: 2px 7px;
   border-radius: 5px;
   font-weight: 600;
 }
 
 .metaValueActive {
-  color: var(--color-accent-300);
-  background: color-mix(in srgb, var(--color-accent) 16%, transparent);
+  color: var(--color-accent-700);
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
   padding: 2px 7px;
   border-radius: 5px;
   font-weight: 700;

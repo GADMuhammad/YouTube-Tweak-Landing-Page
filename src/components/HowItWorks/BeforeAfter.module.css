@@ -58,15 +58,15 @@ html[dir='rtl'] .title {
 }
 
 .panel {
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-divider);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: #101010;
+  background: #fff;
 }
 
 .panelActive {
   border-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-accent) 10%, transparent), 0 16px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-accent) 10%, transparent);
 }
 
 .panelHeader {
@@ -74,7 +74,7 @@ html[dir='rtl'] .title {
   align-items: center;
   justify-content: space-between;
   padding: 13px 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--color-divider);
 }
 
 .panelLabel {
@@ -87,7 +87,7 @@ html[dir='rtl'] .title {
 }
 
 .beforeIcon {
-  color: #e06666;
+  color: #c23b3b;
 }
 
 .afterIcon {
@@ -104,13 +104,13 @@ html[dir='rtl'] .title {
 }
 
 .tagBefore {
-  color: #e06666;
-  background: color-mix(in srgb, #e06666 16%, transparent);
+  color: #c23b3b;
+  background: color-mix(in srgb, #c23b3b 16%, transparent);
 }
 
 .tagAfter {
-  color: var(--color-accent-300);
-  background: color-mix(in srgb, var(--color-accent) 16%, transparent);
+  color: var(--color-accent-700);
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
 }
 
 .panelBody {
@@ -139,7 +139,7 @@ html[dir='rtl'] .title {
   aspect-ratio: 16 / 9;
   border-radius: 7px;
   overflow: hidden;
-  background: linear-gradient(140deg, #2b2f45, #151826);
+  background: linear-gradient(140deg, var(--color-neutral-200), var(--color-neutral-300));
 }
 
 .thumb {
@@ -175,7 +175,7 @@ html[dir='rtl'] .duration {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.32;
-  color: #f1f1f1;
+  color: #0f0f0f;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -185,14 +185,14 @@ html[dir='rtl'] .duration {
 .rowChannel {
   font-size: 11px;
   line-height: 1.4;
-  color: #aaa;
+  color: #606060;
   margin-top: 4px;
 }
 
 .rowMeta {
   font-size: 11px;
   line-height: 1.4;
-  color: #8f8f97;
+  color: #606060;
 }
 
 .loading {
@@ -207,8 +207,8 @@ html[dir='rtl'] .duration {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 0.15);
-  border-top-color: #e06666;
+  border: 3px solid var(--color-divider);
+  border-top-color: #c23b3b;
   animation: uspin 0.9s linear infinite;
 }
 
@@ -221,7 +221,7 @@ html[dir='rtl'] .duration {
 .loadingText {
   font-size: 11px;
   line-height: 1.3;
-  color: #8f8f97;
+  color: #606060;
 }
 
 .loadMoreBtn {
