@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 22px 48px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 2px solid var(--color-divider);
 }
 
 .brand {
@@ -15,12 +15,11 @@
 .logo {
   width: 32px;
   height: 32px;
-  border-radius: 9px;
-  background: linear-gradient(180deg, var(--brand-red-start), var(--brand-red-end));
+  border-radius: 0;
+  background: var(--color-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(255, 40, 40, 0.4);
   flex: none;
 }
 
@@ -42,7 +41,7 @@
   gap: 7px;
   padding: 9px 15px;
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-neutral-700);
+  border: 1px solid var(--color-divider);
   background: transparent;
   color: var(--color-text);
   font-family: 'Tajawal', var(--font-en);
@@ -53,12 +52,12 @@
 }
 
 .langBtn:hover {
-  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
-  border-color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-text) 7%, transparent);
+  border-color: var(--color-text);
 }
 
 .langIcon {
-  color: var(--color-accent-300);
+  color: var(--color-accent-700);
 }
 
 .chromeBtn {

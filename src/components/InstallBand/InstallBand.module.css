@@ -1,9 +1,7 @@
 .band {
   padding: 64px 48px;
   text-align: center;
-  background:
-    radial-gradient(900px 420px at 50% -40%, color-mix(in srgb, var(--color-section-glow) 70%, transparent), transparent 64%),
-    var(--color-section);
+  background: var(--color-accent);
 }
 
 .title {
@@ -11,7 +9,7 @@
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0 0 14px;
-  color: var(--color-text);
+  color: var(--color-bg);
 }
 
 html[dir='rtl'] .title {
@@ -23,7 +21,7 @@ html[dir='rtl'] .title {
   line-height: 1.55;
   margin: 0 auto 30px;
   max-width: 48ch;
-  color: color-mix(in srgb, var(--color-text) 78%, transparent);
+  color: color-mix(in srgb, var(--color-bg) 78%, transparent);
 }
 
 html[dir='rtl'] .sub {
@@ -51,27 +49,27 @@ html[dir='rtl'] .sub {
 }
 
 .ctaPrimary {
-  border-color: var(--color-text);
-  background: var(--color-text);
-  color: var(--color-section);
+  border-color: var(--color-bg);
+  background: var(--color-bg);
+  color: var(--color-accent);
   font-weight: 700;
   transition: filter 0.15s;
 }
 
 .ctaPrimary:hover {
-  filter: brightness(1.08);
+  filter: brightness(0.96);
 }
 
 .ctaSecondary {
   padding-inline: 24px;
-  border-color: rgba(255, 255, 255, 0.35);
-  color: var(--color-text);
+  border-color: color-mix(in srgb, var(--color-bg) 55%, transparent);
+  color: var(--color-bg);
   font-weight: 600;
   transition: background 0.15s;
 }
 
 .ctaSecondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: color-mix(in srgb, var(--color-bg) 12%, transparent);
 }
 
 @media (max-width: 860px) {

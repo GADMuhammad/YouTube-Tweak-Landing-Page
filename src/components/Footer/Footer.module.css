@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 26px 48px;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 2px solid var(--color-divider);
   font-size: 13px;
   line-height: 1.4;
   color: color-mix(in srgb, var(--color-text) 50%, transparent);
@@ -20,8 +20,8 @@
 .logo {
   width: 22px;
   height: 22px;
-  border-radius: 6px;
-  background: linear-gradient(180deg, var(--brand-red-start), var(--brand-red-end));
+  border-radius: 0;
+  background: var(--color-accent);
   display: flex;
   align-items: center;
   justify-content: center;
