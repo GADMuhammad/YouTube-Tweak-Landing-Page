@@ -73,11 +73,13 @@
   font-size: 13.5px;
   white-space: nowrap;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 
 .chromeBtn:hover {
-  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
 }
 
 @media (max-width: 860px) {
