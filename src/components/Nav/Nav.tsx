@@ -1,14 +1,14 @@
-import { useTranslation } from 'react-i18next';
-import { HandPalm, Translate, Plus } from '@phosphor-icons/react';
-import type { Lang } from '../../App';
-import styles from './Nav.module.css';
+import { useTranslation } from "react-i18next";
+import { HandPalm, Translate, Plus } from "@phosphor-icons/react";
+import type { Lang } from "../../App";
+import styles from "./Nav.module.css";
 
 interface NavProps {
   lang: Lang;
   onToggleLang: () => void;
 }
 
-const CHROME_URL = 'https://chromewebstore.google.com/detail/youtube-tweak/oboblbfbeolffgmhmgkjaaamelcmncoi';
+const CHROME_URL = "https://chromewebstore.google.com/detail/youtube-tweak/oboblbfbeolffgmhmgkjaaamelcmncoi";
 
 export default function Nav({ onToggleLang }: NavProps) {
   const { t } = useTranslation();
@@ -19,16 +19,16 @@ export default function Nav({ onToggleLang }: NavProps) {
         <div className={styles.logo}>
           <HandPalm size={18} weight="bold" color="#fff" />
         </div>
-        <span className={styles.wordmark}>{t('meta.extName')}</span>
+        <span className={styles.wordmark}>{t("meta.extName")}</span>
       </div>
       <div className={styles.actions}>
         <button type="button" className={styles.langBtn} onClick={onToggleLang}>
           <Translate size={15} weight="bold" className={styles.langIcon} />
-          {t('nav.otherLangLabel')}
+          {t("nav.otherLangLabel")}
         </button>
         <a href={CHROME_URL} target="_blank" rel="noreferrer" className={styles.chromeBtn}>
           <Plus size={15} weight="bold" />
-          {t('nav.addToChrome')}
+          {t("nav.addToChrome")}
         </a>
       </div>
     </nav>

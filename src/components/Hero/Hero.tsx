@@ -30,10 +30,10 @@ export default function Hero({ title, sub, mock, wideText }: HeroProps) {
             <Plus size={16} weight="bold" />
             <span>{t("cta.addFree")}</span>
           </a>
-          <a href={GITHUB_URL} target="_blank" rel="noreferrer" className={styles.ctaSecondary}>
+          {/* <a href={GITHUB_URL} target="_blank" rel="noreferrer" className={styles.ctaSecondary}>
             <GithubLogo size={16} weight="bold" />
             <span>{t("cta.github")}</span>
-          </a>
+          </a> */}
         </div>
       </div>
       <div className={styles.mock}>{mock}</div>

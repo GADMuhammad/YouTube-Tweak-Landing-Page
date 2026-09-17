@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next';
-import { LockSimple } from '@phosphor-icons/react';
-import { FEATURES } from '../../data/features';
-import styles from './FeatureSwitcher.module.css';
+import { useTranslation } from "react-i18next";
+import { LockSimple } from "@phosphor-icons/react";
+import { FEATURES } from "../../data/features";
+import styles from "./FeatureSwitcher.module.css";
 
 interface FeatureSwitcherProps {
   feat: 0 | 1 | 2 | 3 | 4;
@@ -13,7 +13,7 @@ export default function FeatureSwitcher({ feat, onSelect }: FeatureSwitcherProps
 
   return (
     <div className={styles.wrap}>
-      <span className={styles.kicker}>{t('switcher.kicker')}</span>
+      <span className={styles.kicker}>{t("switcher.kicker")}</span>
       <div className={styles.tabs}>
         {FEATURES.map((f, i) => {
           const Icon = f.icon;
@@ -24,11 +24,7 @@ export default function FeatureSwitcher({ feat, onSelect }: FeatureSwitcherProps
               type="button"
               disabled={f.disabled}
               onClick={() => !f.disabled && onSelect(i as 0 | 1 | 2 | 3 | 4)}
-              className={[
-                styles.tab,
-                active ? styles.active : '',
-                f.disabled ? styles.disabled : '',
-              ].join(' ')}
+              className={[styles.tab, active ? styles.active : "", f.disabled ? styles.disabled : ""].join(" ")}
             >
               <Icon size={16} weight="bold" />
               {t(`features.${i}.tab`)}
@@ -36,7 +32,7 @@ export default function FeatureSwitcher({ feat, onSelect }: FeatureSwitcherProps
                 <>
                   <LockSimple size={13} weight="bold" className={styles.lock} />
                   <span className={styles.tooltip}>
-                    {t('switcher.comingSoon')}
+                    {t("switcher.comingSoon")}
                     <span className={styles.tooltipArrow} />
                   </span>
                 </>
