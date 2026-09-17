@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
-import { Plus, GithubLogo } from "@phosphor-icons/react";
+// import { Plus, GithubLogo } from "@phosphor-icons/react";
+import { Plus } from "@phosphor-icons/react";
 import styles from "./InstallBand.module.css";
 
 const CHROME_URL = "https://chromewebstore.google.com/detail/youtube-tweak/oboblbfbeolffgmhmgkjaaamelcmncoi";
-const GITHUB_URL = "https://github.com/GADMuhammad/Youtube-Tweak";
+// const GITHUB_URL = "https://github.com/GADMuhammad/Youtube-Tweak";
 
 interface InstallBandProps {
   title: string;

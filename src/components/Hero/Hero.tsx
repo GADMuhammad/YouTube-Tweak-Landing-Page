@@ -1,10 +1,11 @@
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
-import { HandPalm, Plus, GithubLogo } from "@phosphor-icons/react";
+// import { HandPalm, Plus, GithubLogo } from "@phosphor-icons/react";
+import { HandPalm, Plus } from "@phosphor-icons/react";
 import styles from "./Hero.module.css";
 
 const CHROME_URL = "https://chromewebstore.google.com/detail/youtube-tweak/oboblbfbeolffgmhmgkjaaamelcmncoi";
-const GITHUB_URL = "https://github.com/GADMuhammad/Youtube-Tweak";
+// const GITHUB_URL = "https://github.com/GADMuhammad/Youtube-Tweak";
 
 interface HeroProps {
   title: string;
