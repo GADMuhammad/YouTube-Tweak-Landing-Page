@@ -73,13 +73,17 @@ html[dir="rtl"] .title {
   border-color: var(--color-accent);
   background: var(--color-accent);
   color: #fff;
+  /* transition: background 0.5s, border-color 0.5s; */
   transition:
-    background 0.5s,
-    border-color 0.5s;
-  -webkit-animation: ctaVibrate 4s ease-in-out infinite;
-  animation: ctaVibrate 4s ease-in-out infinite;
+    background 0.5s ease-in-out,
+    border-color 0.5s ease-in-out,
+    transform 0.3s ease-in-out;
+  /* -webkit-animation: ctaVibrate 4s ease-in-out infinite; */
+  /* animation: ctaVibrate 4s ease-in-out infinite; */
   transform-origin: center;
   will-change: transform;
+  box-shadow: 6px 8px 0px 2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 6px 8px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
 .ctaPrimary:hover {
@@ -88,6 +92,7 @@ html[dir="rtl"] .title {
   color: #fff;
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
+  transform: scale(1.03);
 }
 
 @-webkit-keyframes ctaVibrate {
